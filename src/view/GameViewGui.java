@@ -44,6 +44,9 @@ public class GameViewGui extends javax.swing.JFrame {
         lblAjtoFelirat1 = new javax.swing.JLabel();
         lblAjtoFelirat2 = new javax.swing.JLabel();
         lblAjtoFelirat3 = new javax.swing.JLabel();
+        txtfAjtoAllapot1 = new javax.swing.JTextField();
+        txtfAjtoAllapot2 = new javax.swing.JTextField();
+        txtfAjtoAllapot3 = new javax.swing.JTextField();
         nvbMenusor = new javax.swing.JMenuBar();
         mnFile = new javax.swing.JMenu();
         mniKilepes = new javax.swing.JMenuItem();
@@ -100,6 +103,30 @@ public class GameViewGui extends javax.swing.JFrame {
         lblAjtoFelirat3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         lblAjtoFelirat3.setText("III.Ajtó");
 
+        txtfAjtoAllapot1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtfAjtoAllapot1.setText("Zárva");
+        txtfAjtoAllapot1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfAjtoAllapot1ActionPerformed(evt);
+            }
+        });
+
+        txtfAjtoAllapot2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtfAjtoAllapot2.setText("Zárva");
+        txtfAjtoAllapot2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfAjtoAllapot2ActionPerformed(evt);
+            }
+        });
+
+        txtfAjtoAllapot3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtfAjtoAllapot3.setText("Zárva");
+        txtfAjtoAllapot3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfAjtoAllapot3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -110,26 +137,31 @@ public class GameViewGui extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(lblAjtoFelirat1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblAjtoFelirat2)
                         .addGap(59, 59, 59)
                         .addComponent(lblAjtoFelirat3)
                         .addGap(25, 25, 25))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblAjtoKep1)
-                            .addComponent(btnValaszt1))
+                            .addComponent(btnValaszt1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtfAjtoAllapot1, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblAjtoKep2)
-                            .addComponent(btnValaszt2))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
+                                .addComponent(btnValaszt2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnValaszt3))
-                            .addComponent(lblAjtoKep3))))
-                .addContainerGap())
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtfAjtoAllapot2)
+                                    .addComponent(lblAjtoKep2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblAjtoKep3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtfAjtoAllapot3))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,12 +177,17 @@ public class GameViewGui extends javax.swing.JFrame {
                     .addComponent(lblAjtoKep3)
                     .addComponent(lblAjtoKep2)
                     .addComponent(lblAjtoKep1))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtfAjtoAllapot1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtfAjtoAllapot3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtfAjtoAllapot2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnValaszt1)
                     .addComponent(btnValaszt2)
                     .addComponent(btnValaszt3))
-                .addContainerGap())
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         mnFile.setText("File");
@@ -189,12 +226,12 @@ public class GameViewGui extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblCim, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnUjJatek)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
         );
 
         pack();
@@ -211,6 +248,18 @@ public class GameViewGui extends javax.swing.JFrame {
     private void btnValaszt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValaszt2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnValaszt2ActionPerformed
+
+    private void txtfAjtoAllapot1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfAjtoAllapot1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfAjtoAllapot1ActionPerformed
+
+    private void txtfAjtoAllapot2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfAjtoAllapot2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfAjtoAllapot2ActionPerformed
+
+    private void txtfAjtoAllapot3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfAjtoAllapot3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfAjtoAllapot3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,6 +287,18 @@ public class GameViewGui extends javax.swing.JFrame {
     public JMenuItem getMniKilepes() {
         return mniKilepes;
     }
+        public javax.swing.JTextField getTxtfAjtoAllapot1() {
+        return txtfAjtoAllapot1;
+    }
+
+    public javax.swing.JTextField getTxtfAjtoAllapot2() {
+        return txtfAjtoAllapot2;
+    }
+
+    public javax.swing.JTextField getTxtfAjtoAllapot3() {
+        return txtfAjtoAllapot3;
+    }
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -259,5 +320,8 @@ public class GameViewGui extends javax.swing.JFrame {
     private javax.swing.JMenuItem mniKilepes;
     private javax.swing.JMenuBar nvbMenusor;
     private javax.swing.JTextArea txtaKiiras;
+    private javax.swing.JTextField txtfAjtoAllapot1;
+    private javax.swing.JTextField txtfAjtoAllapot2;
+    private javax.swing.JTextField txtfAjtoAllapot3;
     // End of variables declaration//GEN-END:variables
 }
