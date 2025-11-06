@@ -26,86 +26,86 @@ public class GameViewGui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton4 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        lblCim = new javax.swing.JLabel();
+        lblAjtoKep2 = new javax.swing.JLabel();
+        lblAjtoKep3 = new javax.swing.JLabel();
+        lblAjtoKep1 = new javax.swing.JLabel();
+        lblAjtoFelirat2 = new javax.swing.JLabel();
+        lblAjtoFelirat1 = new javax.swing.JLabel();
+        lblAjtoFelirat3 = new javax.swing.JLabel();
+        btnValaszt1 = new javax.swing.JButton();
+        btnValaszt3 = new javax.swing.JButton();
+        btnValaszt2 = new javax.swing.JButton();
+        btnUjJatek = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtaKiiras = new javax.swing.JTextArea();
+        nvbMenusor = new javax.swing.JMenuBar();
+        mnFile = new javax.swing.JMenu();
+        mniKilepes = new javax.swing.JMenuItem();
+        mnUjJatek = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("   Vetélkedő (Monty Hall) Játék");
+        lblCim.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblCim.setText("   Vetélkedő (Monty Hall) Játék");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ilyes.borbala\\Documents\\NetBeansProjects\\Vetelkedo\\src\\view\\ajto2.png")); // NOI18N
+        lblAjtoKep2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ilyes.borbala\\Documents\\NetBeansProjects\\Vetelkedo\\src\\view\\ajto2.png")); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ilyes.borbala\\Documents\\NetBeansProjects\\Vetelkedo\\src\\view\\ajto2.png")); // NOI18N
+        lblAjtoKep3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ilyes.borbala\\Documents\\NetBeansProjects\\Vetelkedo\\src\\view\\ajto2.png")); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\ilyes.borbala\\Documents\\NetBeansProjects\\Vetelkedo\\src\\view\\ajto2.png")); // NOI18N
+        lblAjtoKep1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ilyes.borbala\\Documents\\NetBeansProjects\\Vetelkedo\\src\\view\\ajto2.png")); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel5.setText("II.Ajtó");
+        lblAjtoFelirat2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblAjtoFelirat2.setText("II.Ajtó");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel6.setText("I.Ajtó");
+        lblAjtoFelirat1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblAjtoFelirat1.setText("I.Ajtó");
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel7.setText("III.Ajtó");
+        lblAjtoFelirat3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblAjtoFelirat3.setText("III.Ajtó");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
-        jButton1.setText("Választ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnValaszt1.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        btnValaszt1.setText("Választ");
+        btnValaszt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnValaszt1ActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
-        jButton2.setText("Választ");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnValaszt3.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        btnValaszt3.setText("Választ");
+        btnValaszt3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnValaszt3ActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
-        jButton3.setText("Választ");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnValaszt2.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        btnValaszt2.setText("Választ");
+        btnValaszt2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnValaszt2ActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        btnUjJatek.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        btnUjJatek.setText("Új Játék");
 
-        jButton4.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jButton4.setText("Új Játék");
+        txtaKiiras.setColumns(20);
+        txtaKiiras.setRows(5);
+        jScrollPane2.setViewportView(txtaKiiras);
 
-        jMenu1.setText("File");
+        mnFile.setText("File");
 
-        jMenuItem1.setText("Kilépés");
-        jMenu1.add(jMenuItem1);
+        mniKilepes.setText("Kilépés");
+        mnFile.add(mniKilepes);
 
-        jMenuBar1.add(jMenu1);
+        nvbMenusor.add(mnFile);
 
-        jMenu2.setText("Új Játék");
-        jMenuBar1.add(jMenu2);
+        mnUjJatek.setText("Új Játék");
+        nvbMenusor.add(mnUjJatek);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(nvbMenusor);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -115,35 +115,35 @@ public class GameViewGui extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
+                        .addComponent(lblCim, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addComponent(jLabel6)
+                        .addComponent(lblAjtoFelirat1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
+                        .addComponent(lblAjtoFelirat2)
                         .addGap(59, 59, 59)
-                        .addComponent(jLabel7)
+                        .addComponent(lblAjtoFelirat3)
                         .addGap(67, 67, 67))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jButton1))
+                                    .addComponent(lblAjtoKep1)
+                                    .addComponent(btnValaszt1))
                                 .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jButton3))
+                                    .addComponent(lblAjtoKep2)
+                                    .addComponent(btnValaszt2))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(6, 6, 6)
-                                        .addComponent(jButton2))
-                                    .addComponent(jLabel3)))
+                                        .addComponent(btnValaszt3))
+                                    .addComponent(lblAjtoKep3)))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)))
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+                                .addComponent(btnUjJatek, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -151,44 +151,44 @@ public class GameViewGui extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblCim, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel5)
-                        .addComponent(jLabel7))
-                    .addComponent(jLabel6))
+                        .addComponent(lblAjtoFelirat2)
+                        .addComponent(lblAjtoFelirat3))
+                    .addComponent(lblAjtoFelirat1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4))
+                    .addComponent(lblAjtoKep3)
+                    .addComponent(lblAjtoKep2)
+                    .addComponent(lblAjtoKep1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                    .addComponent(btnValaszt1)
+                    .addComponent(btnValaszt2)
+                    .addComponent(btnValaszt3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnUjJatek)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnValaszt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValaszt1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnValaszt1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnValaszt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValaszt3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnValaszt3ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnValaszt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValaszt2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnValaszt2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,22 +226,22 @@ public class GameViewGui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton btnUjJatek;
+    private javax.swing.JButton btnValaszt1;
+    private javax.swing.JButton btnValaszt2;
+    private javax.swing.JButton btnValaszt3;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblAjtoFelirat1;
+    private javax.swing.JLabel lblAjtoFelirat2;
+    private javax.swing.JLabel lblAjtoFelirat3;
+    private javax.swing.JLabel lblAjtoKep1;
+    private javax.swing.JLabel lblAjtoKep2;
+    private javax.swing.JLabel lblAjtoKep3;
+    private javax.swing.JLabel lblCim;
+    private javax.swing.JMenu mnFile;
+    private javax.swing.JMenu mnUjJatek;
+    private javax.swing.JMenuItem mniKilepes;
+    private javax.swing.JMenuBar nvbMenusor;
+    private javax.swing.JTextArea txtaKiiras;
     // End of variables declaration//GEN-END:variables
 }
