@@ -9,52 +9,90 @@ import javax.swing.JOptionPane;
 
 public class GameController {
 
-    private GameViewGui nezet;
     private GameModell modell;
+    private GameViewGui nezet;
     private int kor;
+    private boolean valasztott;
+    private int jatekosValasztas;
+    private int musorvezetoAjto;
 
     public GameController(GameViewGui nezet) {
         this.nezet = nezet;
         this.modell = new GameModell();
-        this.kor = 1;
-
-        initEventek();
         ujJatek();
-    }
 
-    private void initEventek() {
-        nezet.getBtnUjJatek().addActionListener(e -> ujJatek());
-        nezet.getMniKilepes().addActionListener(e -> kilepes());
-        nezet.getBtnValaszt1().addActionListener(e -> ajtoValasztas(0));
-        nezet.getBtnValaszt2().addActionListener(e -> ajtoValasztas(1));
-        nezet.getBtnValaszt3().addActionListener(e -> ajtoValasztas(2));
+        nezet.getBtnValaszt1().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                ajtoValasztas(0);
+            }
+        });
+
+        nezet.getBtnValaszt2().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                ajtoValasztas(1);
+            }
+        });
+
+        nezet.getBtnValaszt3().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                ajtoValasztas(2);
+            }
+        });
+
+        nezet.getBtnUjJatek().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                ujJatek();
+            }
+        });
+
+        nezet.getMniKilepes().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
 
     private void ujJatek() {
         modell.ujJatek();
         kor = 1;
-        nezet.getTxtaKiiras().setText("Válassz egy ajtót! Csak az egyik mögött van nyeremény.\n");
-        frissitAllapotok();
+        valasztott = false;
+        jatekosValasztas = -1;
+        musorvezetoAjto = -1;
+        nezet.getTxtaKiiras().setText(
+            "Üdv a Vetélkedőben!\n\n" +
+            "A Monty Hall játékban három ajtó van, az egyik mögött autó, a többin kecskék.\n" +
+            "Válassz egy ajtót, majd a műsorvezető kinyit egy kecskés ajtót!\n" +
+            "Ezután dönthetsz: maradsz, vagy váltasz.\n"
+        );
+        frissitAjtoAllapotok("Zárva", "Zárva", "Zárva");
     }
 
     private void ajtoValasztas(int index) {
-        boolean nyert = modell.jatekosValaszt(index);
-        frissitAllapotok();
-
-        if (nyert) {
-            nezet.getTxtaKiiras().setText("Gratulálok, nyertél a(z) " + kor + ". körben!");
+        if (!valasztott) {
+            jatekosValasztas = index;
+            musorvezetoAjto = modell.musorvezetoKinyit(index);
+            valasztott = true;
+            nezet.getTxtaKiiras().setText(
+                "A műsorvezető kinyitotta a(z) " + (musorvezetoAjto + 1) + ". ajtót (kecske volt mögötte).\n" +
+                "Most dönthetsz: maradsz az eredeti választásnál, vagy váltasz a másik zárt ajtóra."
+            );
+            frissitAjtoAllapotok();
         } else {
-            nezet.getTxtaKiiras().setText("Sajnálom, nem nyertél ebben a körben!");
+            boolean nyert = modell.jatekosVegsoValaszt(index);
+            kor++;
+            if (nyert) {
+                nezet.getTxtaKiiras().setText("Gratulálok, nyertél az " + kor + ". körben! 🚗");
+            } else {
+                nezet.getTxtaKiiras().setText("Sajnálom, kecskét választottál az " + kor + ". körben. 🐐");
+            }
+            frissitAjtoAllapotok();
         }
-
-        kor++;
     }
 
-    private void frissitAllapotok() {
+    private void frissitAjtoAllapotok() {
         for (int i = 0; i < modell.getAjtok().size(); i++) {
             DoorModell ajto = modell.getAjtok().get(i);
             String allapot = ajto.isAllapot() ? "Nyitva" : "Zárva";
-
             switch (i) {
                 case 0 -> nezet.getTxtfAjtoAllapot1().setText(allapot);
                 case 1 -> nezet.getTxtfAjtoAllapot2().setText(allapot);
@@ -63,10 +101,9 @@ public class GameController {
         }
     }
 
-    private void kilepes() {
-        int valasz = JOptionPane.showConfirmDialog(nezet, "Biztosan kilépsz?", "Kilépés", JOptionPane.YES_NO_OPTION);
-        if (valasz == JOptionPane.YES_OPTION) {
-            System.exit(0);
-        }
+    private void frissitAjtoAllapotok(String a1, String a2, String a3) {
+        nezet.getTxtfAjtoAllapot1().setText(a1);
+        nezet.getTxtfAjtoAllapot2().setText(a2);
+        nezet.getTxtfAjtoAllapot3().setText(a3);
     }
 }

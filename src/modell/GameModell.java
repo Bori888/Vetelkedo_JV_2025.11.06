@@ -6,38 +6,44 @@ import java.util.Random;
 
 public class GameModell {
     private List<DoorModell> ajtok;
-    private boolean jatekFolyamatban;
+    private int nyeroAjtoIndex;
+    private Random rnd;
 
     public GameModell() {
+        rnd = new Random();
         ujJatek();
     }
 
     public void ujJatek() {
         ajtok = new ArrayList<>();
-        Random rnd = new Random();
-        int nyeroAjto = rnd.nextInt(3);
-
+        nyeroAjtoIndex = rnd.nextInt(3);
         for (int i = 0; i < 3; i++) {
-            boolean nyeremeny = (i == nyeroAjto);
-            ajtok.add(new DoorModell(nyeremeny, false));
+            ajtok.add(new DoorModell(i == nyeroAjtoIndex, false));
         }
-
-        jatekFolyamatban = true;
     }
 
-    public boolean jatekosValaszt(int index) {
-        if (!jatekFolyamatban) {
-            return false;
+    public int musorvezetoKinyit(int valasztottAjto) {
+        int kinyitott = -1;
+        for (int i = 0; i < ajtok.size(); i++) {
+            if (i != valasztottAjto && i != nyeroAjtoIndex) {
+                ajtok.get(i).setAllapot(true);
+                kinyitott = i;
+                break;
+            }
         }
+        return kinyitott;
+    }
 
-        DoorModell valasztott = ajtok.get(index);
-        valasztott.setAllapot(true);
-        jatekFolyamatban = false;
-
-        return valasztott.isNyeremeny();
+    public boolean jatekosVegsoValaszt(int valasztottAjto) {
+        ajtok.get(valasztottAjto).setAllapot(true);
+        return ajtok.get(valasztottAjto).isNyeremeny();
     }
 
     public List<DoorModell> getAjtok() {
         return ajtok;
+    }
+
+    public int getNyeresAjtoIndex() {
+        return nyeroAjtoIndex;
     }
 }
