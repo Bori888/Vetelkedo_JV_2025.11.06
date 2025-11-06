@@ -1,12 +1,12 @@
-
 package main;
 
+import controller.GameController;
+import view.GameViewGui;
 
 public class Vetelkedo {
-
- 
     public static void main(String[] args) {
-        // TODO code application logic here
+        GameViewGui nezet = new GameViewGui();
+        new GameController(nezet);
+        nezet.setVisible(true);
     }
-    
 }

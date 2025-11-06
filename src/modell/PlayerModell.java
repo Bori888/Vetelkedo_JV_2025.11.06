@@ -9,6 +9,11 @@ public class PlayerModell {
         this.valtott = false;
     }
 
+    public PlayerModell(int valasztottAjto, boolean valtott) {
+        this.valasztottAjto = valasztottAjto;
+        this.valtott = valtott;
+    }
+
     public int getValasztottAjto() {
         return valasztottAjto;
     }
